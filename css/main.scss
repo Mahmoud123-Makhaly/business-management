@@ -1,0 +1,232 @@
+// blobal styles
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Readex Pro", sans-serif;
+
+}
+p , h1 , h2 , h3 , h4 , h5 , h6{
+    margin: 0;
+}
+:root{
+    --main-color:#0033FA
+}
+
+// Generate font size loop
+@for $i from 1 through 500 {
+    .font-#{$i} {
+      font-size: #{$i}px;
+    }
+  }
+//   Generate padding loop
+ @for $i from 5 through 300   {
+    .p-#{$i} {
+        padding: #{$i}px;
+      }
+  
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+  
+  .pe-#{$i} {
+    padding-right: #{$i}px;
+  }
+  
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  
+  .ps-#{$i} {
+    padding-left: #{$i}px;
+  }
+  
+  .px-#{$i} {
+    padding-left: #{$i}px;
+    padding-right: #{$i}px;
+  }
+  
+  .py-#{$i} {
+    padding-top: #{$i}px;
+    padding-bottom: #{$i}px;
+  }
+}
+// Generate raduis loop
+$border-radius-values: (5px, 10px, 15px, 20px, 25px);
+
+@for $i from 1 through length($border-radius-values) {
+  .border-radius-#{$i} {
+    border-radius: nth($border-radius-values, $i);
+  }
+}
+// start navbar
+.navbar{
+    padding: 0;
+}
+.navbar .container{
+border-bottom: 1px solid #DDE5EB;
+padding: 15px 0  ;
+
+}
+.navbar-brand img{
+    height: 48px;
+    width: 161px;
+}
+.navbar .lang{
+    margin-inline-end: 20px;
+    font-weight: 600;
+  
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+ 
+    color: #000;
+    padding: 0;
+padding: 4px 24px;
+}
+.navbar .dropdown-toggle::after{
+display: none;
+}
+.demo-btn , .demo-btn:hover{
+    background-color: var(--main-color);
+     font-weight: 600;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0;
+    padding: 8px 14px;
+}
+// start home section 
+.home{
+    background-image: url(../images/home/bg-left.png) , url(../images/home/bg-right.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left , top right;
+}
+
+.home .gradient-title{
+    background-color: #E6F4FC;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 10px;
+    color: #0089FF;
+}
+.home-info .content  h2 {
+color: #172530;
+font-size: 56px;
+line-height: 80px
+}
+.home-info .content  h2:last-of-type{
+ width: fit-content;
+ background-image: url(../images/home/bg-title.png);
+}
+.home-info .content p{
+    color: #4A6071;
+}
+.home-info .demo-btn{
+    font-size: 20px;
+}
+.home-info .demo-btn:last-of-type{
+    border: 1px solid  #D0D5DD ; 
+    color: #2D414F;
+    
+}
+@media (max-width: 1200px) {
+    .home{
+
+        background-image: none;
+    }
+    .home-info .content h2{
+        font-size: 36px;
+        line-height: 55px;
+    }
+    .home-info .demo-btn:last-of-type{
+        margin-top: 18px;
+    }
+    .free-trial{
+        padding-bottom: 50px;
+    }
+}
+// start smart business
+.smart-business{
+    background-image: url(../images/smart-business/smart-business.png) ;
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width: 1200px) {
+    .smart-business .title{
+        font-size: 36px;
+    }
+}
+// start our solutions
+.our-solutions .title{
+color: #172530;
+}
+.our-solutions  .desc{
+    color: #2D414F;
+}
+.crm p , .hr p{
+color: #fff;
+}
+.our-solutions  .solution-item{
+    background-color: #0142FE;
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+     
+}
+.our-solutions  .solution-item h6 {
+    background-color: rgba(255,255,255,.4);
+    width: fit-content;
+}
+
+.our-solutions  .solution-item.crm{
+    background-color: #090022!important;
+}
+.our-solutions .solution-item.commerce{
+    background: linear-gradient(
+        to right, /* You can change the direction if needed */
+        rgba(255, 218, 55, 0.2) 0%,   /* Start with 20% opacity */
+        rgba(255, 218, 55, 0) 50%,    /* Change to 0% opacity in the middle */
+        rgba(255, 218, 55, 0.2) 100%  /* End with 20% opacity */
+      );
+      min-height: auto;
+  }
+  .our-solutions  .solution-item:nth-last-of-type(3) p {
+    color: #2D414F
+    ;
+  }
+.point-sale-btn{
+    background-color: #DC1BBF!important;
+}
+.distribution-btn{
+    background-color: #B2D703!important;
+}
+.accounting-btn {
+    background-color: #0033FA!important;
+}
+.purshasing-btn{
+    background-color: #FFB801!important;
+}
+.sales-btn{
+    background-color: #E77A30!important;
+}
+.inventory-btn{
+    background-color: #000!important;
+}
+.retail-btn{
+    background-color: #00602A!important;
+}
+.our-solutions .owl-nav{
+    display: none;
+}
+.shopping-center {
+    background: linear-gradient(
+        to right,
+        rgba(178, 215, 3, 0.2) 0%,
+        rgba(178, 215, 3, 0) 50%,
+        rgba(178, 215, 3, 0.2) 100%
+    );
+    min-height: auto;
+}
+.shopping-center p{
+    color: #2D414F;
+}
